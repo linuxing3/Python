@@ -1,7 +1,9 @@
 import os
+import re
 result = []
 def get_all(cwd):
     get_dir = os.listdir(cwd)  #遍历当前目录，获取文件列表
+    
     for i in get_dir:          
         sub_dir = os.path.join(cwd,i)  # 把第一步获取的文件加入路径
         if os.path.isdir(sub_dir):     #如果当前仍然是文件夹，递归调用
